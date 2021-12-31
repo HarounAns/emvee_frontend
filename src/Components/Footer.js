@@ -5,6 +5,7 @@ import {
     BsTwitter,
 } from 'react-icons/bs'
 
+const mediumGray = "rgb(55, 57, 62)";
 const LINKS = {
     youtube: 'https://www.youtube.com/c/3MV33',
     discord: 'https://discord.com/channels/915807541856968724/916341477355962368',
@@ -15,7 +16,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/muhammad-haroun-ansari-b017041
 
 export default function Footer() {
     return (
-        <footer style={style.footer} className="bg-light text-center text-lg-start">
+        <footer style={style.footer} className="text-center text-lg-start">
             <div style={style.iconGroup}>
                 <a href={LINKS.youtube} target="_blank" rel="noreferrer">
                     <BsYoutube style={style.icon} />
@@ -27,7 +28,7 @@ export default function Footer() {
                     <BsTwitter style={style.icon} />
                 </a>
             </div>
-            <div className="text-center">
+            <div style={{ backgroundColor: mediumGray }} className="text-center">
                 Copyright © 2021 Team Emvee. All Rights Reserved - Created By <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">Haroun Ansari</a>
             </div>
         </footer>
@@ -37,6 +38,7 @@ export default function Footer() {
 
 const style = {
     footer: {
+        backgroundColor: mediumGray,
         position: 'absolute',
         bottom: 0,
         width: '100%',

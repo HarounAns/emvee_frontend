@@ -4,7 +4,7 @@ import { Card, Container, Spinner } from 'reactstrap'
 import TeamPreview from '../Components/TeamPreview'
 import { EMVEE_API_URL } from '../config'
 
-
+const mediumGray = "rgb(55, 57, 62)";
 export default function Home() {
     const [loading, setLoading] = useState(false)
     const [teams, setTeams] = useState([])
@@ -46,11 +46,11 @@ export default function Home() {
                 ))}
                 {nextKey ? (
                     <Container onClick={fetchTeamsNextPage} style={{ marginTop: "5px", cursor: 'pointer' }}>
-                        <Card>Load More</Card>
+                        <Card style={{ backgroundColor: mediumGray }}>Load More</Card>
                     </Container>
                 ) : (
                     <Container style={{ marginTop: "5px" }}>
-                        <Card>All Teams Loaded</Card>
+                        <Card style={{ backgroundColor: mediumGray }}>All Teams Loaded</Card>
                     </Container>
                 )
                 }

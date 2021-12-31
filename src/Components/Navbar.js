@@ -10,16 +10,11 @@ import {
 export default function NavigationBar() {
     return (
         <div style={{ marginBottom: "30px" }}>
-            <Navbar color="light" light expand="md">
+            <Navbar style={{ backgroundColor: "rgb(55, 57, 62)" }} expand="md">
                 <NavbarBrand >
-                    <Link to="/" style={{ ...linkStyle, color: 'rgba(0,0,0,.9)', marginLeft: 10 }}>Home</Link>
+                    <Link to="/" style={{ ...linkStyle, marginLeft: 10 }}>Home</Link>
                 </NavbarBrand>
                 <Nav className="mr-auto" navbar>
-                    <NavItem>
-                        <NavLink href="#">
-                            <Link to="/videos" style={linkStyle}>Videos</Link>
-                        </NavLink>
-                    </NavItem>
                     <NavItem>
                         <NavLink href="#">
                             <Link to="/teams" style={linkStyle}>Teams</Link>
@@ -30,11 +25,11 @@ export default function NavigationBar() {
                             <Link to="/randomizer" style={linkStyle}>Randomizer</Link>
                         </NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                         <NavLink href="#">
                             <Link to="/shop" style={linkStyle}>Shop</Link>
                         </NavLink>
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem>
                         <NavLink href="#">
                             <Link to="/about" style={linkStyle}>About</Link>
@@ -54,5 +49,5 @@ export default function NavigationBar() {
 
 const linkStyle = {
     textDecoration: 'none',
-    color: 'rgba(0,0,0,.55)'
+    color: '#EEE'
 };

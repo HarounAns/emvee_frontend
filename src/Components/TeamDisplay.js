@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row, Col, Card, Button } from 'reactstrap'
 import { formatPokemonForSmogonGif } from '../helpers'
 
+const mediumGray = "rgb(55, 57, 62)";
+
 export default function TeamDisplay({ team }) {
     function PokemonCard(i) {
         const moveset = team[i];
@@ -16,7 +18,7 @@ export default function TeamDisplay({ team }) {
 
         return (
             <Container style={{ marginTop: "20px" }}>
-                <Card>
+                <Card style={{ backgroundColor: mediumGray }}>
                     <Row style={{ marginTop: "15px", marginLeft: "35px" }}>
                         <Col>
                             <div style={{ width: "150px", height: "120px", marginTop: "20px", marginLeft: "30px" }}>

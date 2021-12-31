@@ -12,7 +12,7 @@ export default function Home() {
                 src={latestVideoIframeURL}
                 width="50%"
                 height="600" />
-            <p>
+            <p style={{ marginTop: "50px" }}>
                 <a href={videosURL} target="_blank" rel="noreferrer">See other videos</a>
             </p>
         </div>
