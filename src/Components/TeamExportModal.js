@@ -16,6 +16,8 @@ export default function TeamExportModal({ team, isOpen, toggle }) {
     const getFormattedExport = () => {
         let list = [];
         for (const set of team) {
+            console.log('set');
+            console.log(set);
             const {
                 pokemon,
                 abilities,
@@ -31,9 +33,9 @@ export default function TeamExportModal({ team, isOpen, toggle }) {
             EVs: ${evsFormatted} 
             ${natures[0]} Nature
             - ${moveslots[0][0].move}
-            - ${moveslots[1][0].move}
-            - ${moveslots[2][0].move}
-            - ${moveslots[3][0].move}
+            - ${moveslots[0][1].move}
+            - ${moveslots[0][2].move}
+            - ${moveslots[0][3].move}
             `
             list.push(template);
         };

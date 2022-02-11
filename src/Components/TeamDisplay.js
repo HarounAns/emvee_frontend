@@ -14,6 +14,9 @@ export default function TeamDisplay({ team }) {
             items,
         } = moveset;
 
+        console.log('moveslots[0]');
+        console.log(moveslots[0]);
+
         const formattedGifPokemon = formatPokemonForSmogonGif(pokemon)
 
         return (
@@ -33,9 +36,9 @@ export default function TeamDisplay({ team }) {
                     </Row>
                     <Row style={{ margin: "10px 70px" }}>
                         <Col><Button style={styles.moveButton} color="primary">{moveslots[0][0].move}</Button></Col>
-                        <Col><Button style={styles.moveButton} color="primary">{moveslots[1][0].move}</Button></Col>
-                        <Col><Button style={styles.moveButton} color="primary">{moveslots[2][0].move}</Button></Col>
-                        <Col><Button style={styles.moveButton} color="primary">{moveslots[3][0].move}</Button></Col>
+                        <Col><Button style={styles.moveButton} color="primary">{moveslots[0][1].move}</Button></Col>
+                        <Col><Button style={styles.moveButton} color="primary">{moveslots[0][2].move}</Button></Col>
+                        <Col><Button style={styles.moveButton} color="primary">{moveslots[0][3].move}</Button></Col>
                     </Row>
                 </Card>
             </Container >

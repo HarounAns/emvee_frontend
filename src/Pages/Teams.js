@@ -11,7 +11,7 @@ export default function Home() {
     const [nextKey, setTNextKey] = useState(null)
 
     const fetchTeams = async (key) => {
-        const url = key ? `${EMVEE_API_URL}?nextKey=${encodeURIComponent(JSON.stringify(key))}` : EMVEE_API_URL;
+        const url = key ? `${EMVEE_API_URL}/teams?nextKey=${encodeURIComponent(JSON.stringify(key))}` : `${EMVEE_API_URL}/teams`;
         const res = await axios.get(url);
 
         const { Teams, nextKey } = res.data
